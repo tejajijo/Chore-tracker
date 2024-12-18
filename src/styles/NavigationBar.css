@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #111; /* Example background color */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .navbar a {
+    float: left; /* Float links to the left */
+    display: block; /* Make links fill the full height of the navbar */
+    color: #818181; /* Example link color */
+    text-align: center;
+    padding: 14px 16px; /* Add some padding */
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd; /* Add a hover effect */
+    color: black;
+  }

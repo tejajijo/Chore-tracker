@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import LoginForm from './components/loginForm';
+import Home from './components/home'
+import AddChores from './components/addChores';
+import ReviewChores from './components/reviewChores';
+import CompletedChores from './components/completedChores';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/login' element = {<LoginForm/>} /> 
+        <Route path='/home/*' element = {<Home/>} />
+        <Route path='/addChores' element = {<AddChores/>} />
+        <Route path='/reviewChores' element = {<ReviewChores/>} />
+        <Route path='/completedChores' element = {<CompletedChores/>} />
+      </Routes> 
+    </BrowserRouter>
   );
 }
+
+
 
 export default App;
